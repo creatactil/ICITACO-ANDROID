@@ -52,12 +52,12 @@ var app = {
         console.log('Received Event: ' + id);
         var pushNotification = window.plugins.pushNotification;
         if (device.platform == 'android' || device.platform == 'Android') {
-            //alert("Llamada a ANDROID");
-            //tu Project ID aca!!
-            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"866773177554","ecb":"app.onNotificationGCM"});
+            alert("Llamada a ANDROID");
+            //tu Project ID aca   Este ID ES CLUB GOLF!!
+            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"109603757979","ecb":"app.onNotificationGCM"});
         }
         else {
-            //alert("LLamada a APPLE");
+            alert("LLamada a APPLE");
             pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
         }
     },
