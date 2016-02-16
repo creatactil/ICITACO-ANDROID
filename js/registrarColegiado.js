@@ -45,7 +45,7 @@ function registrarColegiado() {
 		return false;
 		
 		}else if(xdireccion ==  ""){
-		alert("Escriba su direccióm ");
+		alert("Escriba su dirección ");
 		$("#direccion").focus();
 		return false;
 		

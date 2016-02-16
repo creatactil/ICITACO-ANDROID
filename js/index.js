@@ -52,19 +52,21 @@ var app = {
         console.log('Received Event: ' + id);
         var pushNotification = window.plugins.pushNotification;
         if (device.platform == 'android' || device.platform == 'Android') {
-            alert("Llamada a ANDROID");
-            //tu Project ID aca   Este ID ES CLUB GOLF!!
+            //alert("Llamada a ANDROID");
+            //tu Project ID aca!!
             pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"109603757979","ecb":"app.onNotificationGCM"});
         }
         else {
-            alert("LLamada a APPLE");
+            //alert("LLamada a APPLE");
             pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
         }
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
        //alert('Callback Success! Result = '+result)
-	   document.getElementById('regId').value = result;
+	   //document.getElementById('regId').value = result;
+	   
+	   
 	   //alert(result);
     },
     errorHandler:function(error) {
@@ -80,6 +82,17 @@ var app = {
                    //alert('Registro id = '+e.regid);
                     //Cuando se registre le pasamos el regid al input
                     document.getElementById('regId').value = e.regid;
+					localStorage.regid = e.regid;
+					//alert (e.regid);
+					console.log(e.regid);
+					
+					var uuid = device.uuid;
+		
+					localStorage.uuid = uuid;
+					//alert (uuid);
+				
+					console.log(uuid);
+	   			
 					
                 }
             break;
@@ -88,7 +101,7 @@ var app = {
               // NOTIFICACION!!!
               //alert('message = '+e.message+' msgcnt = '+e.msgcnt);
 			  globo();
-			  
+			  //crearLista();
             break;
  
             case 'error':
@@ -103,11 +116,13 @@ var app = {
     onNotificationAPN: function(event) {
         var pushNotification = window.plugins.pushNotification;
         //alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
+		
+		
         
         if (event.alert) {
            // navigator.notification.alert(event.alert);
 		globo();
-		
+		//crearLista();
         }
         if (event.badge) {
             pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
