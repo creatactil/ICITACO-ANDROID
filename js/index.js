@@ -88,7 +88,7 @@ var app = {
               // NOTIFICACION!!!
               //alert('message = '+e.message+' msgcnt = '+e.msgcnt);
 			  globo();
-			  crearLista();
+			  
             break;
  
             case 'error':
@@ -107,7 +107,7 @@ var app = {
         if (event.alert) {
            // navigator.notification.alert(event.alert);
 		globo();
-		//crearLista();
+		
         }
         if (event.badge) {
             pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
