@@ -30,21 +30,6 @@
 
     <!-- Customize your app and platform with the preference element. -->
 	
-	<feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    
-    	
-	<feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-        <param name="onload" value="true" />
-    </feature>		  
-    
-	<preference name="loglevel" value="DEBUG" />
-    <preference name="AndroidPersistentFileLocation" value="Internal" />	
-	
-	
 	<preference name="phonegap-version" value="cli-5.4.1" />
 	
 	<preference name="permissions" value="none" />
@@ -89,17 +74,20 @@
 		<plugin name="org.apache.cordova.vibration" source="pgb" spec="0.3.11" />
 		<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
 		
-		<!--
+		
 		<feature name="http://api.phonegap.com/1.0/file"/>
 		<feature name="http://api.phonegap.com/1.0/media"/>
 		<feature name="http://api.phonegap.com/1.0/network"/>
 		<feature name="http://api.phonegap.com/1.0/notification"/>
-		<feature name="http://api.phonegap.com/1.0/device"/>-->
+		<feature name="http://api.phonegap.com/1.0/device"/>
 		
 		<!-- Third party plugins -->
     
 		<feature name="PushPlugin">
   		<param name="android-package" value="com.plugin.gcm.PushPlugin" />
+		</feature>
+		<feature name="PushPlugin">
+  			<param name="ios-package" value="PushPlugin" />
 		</feature>
 
    
