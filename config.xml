@@ -92,12 +92,13 @@
     <icon src="imagenes/192.png" gap:platform="android" gap:density="xxxhdpi" />
 
     <!-- Define app splash screen for each platform. -->
-    <gap:splash src="splash/android(200).png" gap:platform="android" gap:density="ldpi" />
-	<gap:splash src="splash/android(320).png" gap:platform="android" gap:density="mdpi" />
-	<gap:splash src="splash/android(480).png" gap:platform="android" gap:density="hdpi" />
-	<gap:splash src="splash/android(720).png" gap:platform="android" gap:density="xhdpi" />
-	<gap:splash src="splash/android(960).png" gap:platform="android" gap:density="xxhdpi" />
-	<gap:splash src="splash/android(1280).png" gap:platform="android" gap:density="xxxhdpi" />
+    <gap:splash src="splash/android(200).png" density="port-ldpi"/>
+	<gap:splash src="splash/android(320).png" density="port-mdpi"/>
+	<gap:splash src="splash/android(480).png" density="port-hdpi"/>
+	<gap:splash src="splash/android(720).png" density="port-xhdpi"/>
+	
+	<!--<gap:splash src="splash/android(960).png" gap:platform="android" gap:density="xxhdpi" />
+	<gap:splash src="splash/android(1280).png" gap:platform="android" gap:density="xxxhdpi" />-->
     
 	<gap:splash src="splash.png" />
     <!--
