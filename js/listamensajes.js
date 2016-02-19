@@ -60,7 +60,6 @@ function crearLista() {
 		/*Pagina dinamica*/
 		content = 
 			'<div data-role="page"  id="id_' + index + '" data-url="id_' + index + '" data-theme="a" >' +
-					'<div style="height:20px; visibility:hidden"> </div>'+
 					'<div data-role="header" data-theme="b">' + 
 					'<a href="" onClick="crearLista()" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" class="ui-link ui-btn-left ui-btn ui-btn-a ui-icon-carat-l ui-btn-icon-notext ui-shadow ui-corner-all" role="button"><span class="ui-btn-inner ui-corner-bottom ui-controlgroup-last" aria-hidden="true"><span class="ui-btn-text">Atrás</span><span class="ui-icon ui-icon-back ui-icon-shadow"></span></span></a>'+
 					'<h1>' + item.titulo + '</h1>' +
@@ -79,7 +78,7 @@ function crearLista() {
 								  '<br>'+
 								  '<br>'+
 								  '<br>'+
-								  '<a href="#page11" style="color:#006837"  data-rel="dialog" onClick="textofirma(\''+item.registro+'\' ), textofirma2(\''+item.titulo+'\' )">'+item.firma+'</a>'+
+								  '<a href="#page11" style="color:#006837"  data-transition="pop" onClick="textofirma(\''+item.registro+'\',\''+item.titulo+'\')">'+item.firma+'</a>'+
 								   '<br>'+
 								  '<br>'+
 								  '</div>' +
@@ -182,39 +181,25 @@ function contador(registro){
 	}
 	
 
-function textofirma(registro){
+function textofirma(registro, titulo){
+	
 	
 	$("#registrofirma").text(registro);
-
-	}
-	
-function textofirma2(nombre){
-
-	$("#titulofirma").text(nombre);
+	$("#titulofirma").text(titulo);
 	
 	}
 	
-function textofirma3(cial){
-	
-	$("#cialfirma").text(cial);
 
-	}
-	
-function textofirma4(codigo){
-	
-	$("#codigofirma").text(codigo);
-
-	}
 	
 	//DESCARGA DE ARCHIVO AL MOVIL FILE TRANSFER
 function descargarArchivo(nombre){
 	
 	            
-                var server = "http://rcgt.creatactil.com/files/";
+                var server = "http://icitaco.creatactil.com/files/";
                 var filename = nombre;
                 var uri = encodeURI(server + filename);
                 
-
+				abrirfichero(uri);
 
                 window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onErrorCallback);
 
@@ -222,7 +207,7 @@ function descargarArchivo(nombre){
                     
                     // alert("got filesystem");
 
-                    fileSystem.root.getDirectory('RCGT',
+                    fileSystem.root.getDirectory('ICITACO',
                         { create:true },
                         transferFile,
                         onErrorCallback
@@ -239,7 +224,7 @@ function descargarArchivo(nombre){
                     console.log(dir.toURL());
                     console.log(uri);
 					
-					abrirfichero(uri);   //modificacion por path  
+					   //modificacion por path  
 					
                     path = dir.toURL() + '/' + filename;//AQUI ES EL CAMBIO de fullpath por toURL()
 					
