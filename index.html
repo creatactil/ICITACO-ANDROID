@@ -37,11 +37,15 @@
 <link rel="stylesheet" href="themes/tema.min.css" />
 <link rel="stylesheet" href="css/estilo.css" />
 
-	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="PushNotification.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 
-
+<script type="text/javascript"> 
+        //El registro al servicio de google lo hacemos automáticamente
+       app.initialize();
+	
+</script>
 
 
 <script src="js/borrarmensaje.js"></script>
@@ -907,11 +911,5 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 
   
 </body>
-<script type="text/javascript"> 
-        //El registro al servicio de google lo hacemos automáticamente
-       app.initialize();
-	
-</script>
-
 </html>
 
