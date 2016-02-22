@@ -109,8 +109,7 @@
 
         Otherwise, you can specify specific domains:
     -->
-    <allow-navigation href="*" />
-	
+    
 	<access origin="*"/>
   
 
