@@ -1,7 +1,7 @@
 function registrarColegiado() {
 
                	
-				app.initialize();
+				
 				
 				var xnombre = $("#nombre").val().toUpperCase();
     		  	var xapellidos = $("#apellidos").val().toUpperCase();
