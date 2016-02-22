@@ -52,7 +52,7 @@ var app = {
         console.log('Received Event: ' + id);
         var pushNotification = window.plugins.pushNotification;
         if (device.platform == 'android' || device.platform == 'Android') {
-            //alert("Llamada a ANDROID");
+            alert("Llamada a ANDROID");
             //tu Project ID aca!!
             pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"109603757979","ecb":"app.onNotificationGCM"});
         }
