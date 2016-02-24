@@ -11,9 +11,9 @@ function compartir(){
 	var texto = "whatsapp://send?text="+"Nombre: "+nom +" Dirección: "+dir +" C. Postal: "+cp +" Barrio: "+bar + " Municpio: "+mun + " Facebook: "+fac;
 	
 	
-	alert(texto)
+	//alert(texto)
 
 	
-	//window.open(texto,'_system');
+	window.open(texto,'_system');
 	
 	}
