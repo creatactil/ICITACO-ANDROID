@@ -46,12 +46,14 @@ function loginVal2(){
 				
 				
 			});
-			init();
-			comprobarid();
+			
 			}
 		},
 
 });
+
+init();
+comprobarid();
 
 }
 
