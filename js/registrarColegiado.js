@@ -40,7 +40,7 @@ function registrarColegiado() {
 		$("#movil").focus();
 		return false;
 		
-		}else if(xnmovil ==  ""){
+		}else if(xmovil ==  ""){
 		alert("Escriba su telefono móvil ");
 		$("#movil").focus();
 		return false;
