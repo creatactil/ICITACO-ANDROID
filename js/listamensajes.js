@@ -34,6 +34,12 @@ function crearLista() {
 			
 			
 			var verde = "#006837";
+			
+			if(item.enlace == ""){
+				var descarga = ""
+				}else{
+				var descarga = "Descargar Archivo"	
+					}
 				
 			if(estado==0){
 				var tema = "#104f4b";
@@ -61,24 +67,23 @@ function crearLista() {
 			'<div data-role="page"  id="id_' + index + '" data-url="id_' + index + '" data-theme="a" >' +
 					'<div data-role="header" data-theme="b">' + 
 					'<a href="" onClick="crearLista()" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" class="ui-link ui-btn-left ui-btn ui-btn-a ui-icon-carat-l ui-btn-icon-notext ui-shadow ui-corner-all" role="button"><span class="ui-btn-inner ui-corner-bottom ui-controlgroup-last" aria-hidden="true"><span class="ui-btn-text">Atrás</span><span class="ui-icon ui-icon-back ui-icon-shadow"></span></span></a>'+
-					'<h1>' + item.titulo + '</h1>' +
+					'<h1 style="font-size:14px; margin:0 10%">' + item.titulo + '</h1>' +
 					
 					'</div>' +
 					'<div data-role="content" id="contenido" >' +
 					'<p style="margin:-1em; padding:0;">' +
                     '<div data-role="fieldcontain" class="result" >' +
-                    '<p style="margin:0; padding:0; color:#006837; font-size: 0.9em ">Nº de Registro: '+item.registro+'<br>'+
-                    'Fecha: '+item.fecha+'</p>'+
+                    '<p style="margin:0; padding:0; color:#006837; font-size: 0.9em ">Fecha: '+item.fecha+'</p>'+
                     
 					'<p>'+ item.texto + '</p>' +
 					'<p><strong>'+item.nombre+'</strong></p>'+
 					'<br>'+
-                    '<a href="" onclick="descargarArchivo(\''+item.enlace+'\')" >'+item.enlace+'</a>'+
+                    '<a style="font-size:13px; color:#006837;" onclick="descargarArchivo(\''+item.enlace+'\')" >'+descarga+'</a>'+
 								  '<br>'+
 								  '<br>'+
 								  '<br>'+
 								  '<center>'+
-								  '<a href="#page11" style="color:#006837; font-size:12px"  data-transition="pop" onClick="textofirma(\''+item.registro+'\',\''+item.titulo+'\')">'+item.firma+'</a>'+
+								  '<a href="#page11" style="font-size:13px; color:#006837;" data-transition="pop" onClick="textofirma(\''+item.registro+'\',\''+item.titulo+'\')">'+item.firma+'</a>'+
 								   '</center>'+
 								   '<br>'+
 								  '<br>'+
