@@ -45,10 +45,12 @@
         //El registro al servicio de google lo hacemos automáticamente
        app.initialize();
 	
+
 </script>
 
 
 <script src="js/borrarmensaje.js"></script>
+<script src="js/borrarevento.js"></script>
 <script src="js/compartir.js"></script>
 
 <script src="js/desconectar.js"></script>
@@ -444,7 +446,7 @@ and (max-width: 450px){
     </ul>
            </p>
 		      <center><strong>
-<label>&copy; Todos los derechos reservados creaTáctil. </label></strong><a href="" onClick="window.open('http://rcgt.creatactil.com/politica de privacidad/index.html','_blank','location=no','closebuttoncaption=Return')">Aviso Legal y Política de Privacidad</a></center>     
+<label>&copy; Todos los derechos reservados creaTáctil. </label></strong><a href="" onClick="window.open('http://icitaco.creatactil.com/politica de privacidad/index.html','_system')">Aviso Legal y Política de Privacidad</a></center>     
 	</div>
     
      <!--footer-->  
@@ -744,8 +746,8 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     
     </div><!--mapa-->
     <br>
-    <div id="contacto">
-    <table style="width:100%; font-size:12px">
+   <div id="contacto">
+     <table style="width:100%; font-size:12px">
   <tr>
     <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Entidad: </td>
     <td id="nombreentidad" class="td1"></td> 
@@ -771,6 +773,10 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     <td ><a id="movilentidad" ></a></td> 
   </tr>
   <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Móvil 2:</td>
+    <td ><a id="movilentidad2" ></a></td> 
+  </tr>
+  <tr>
     <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Teléfono:</td>
     <td ><a id="telefonoentidad"></a></td> 
   </tr>
@@ -779,12 +785,15 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     <td ><a id="webentidad"></a></td> 
   </tr>
   <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Correo:</td>
+    <td ><a id="correoentidad"></a></td> 
+  </tr>
+  <tr>
     <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Facebook:</td>
     <td  ><a id="facebookentidad"></a></td> 
   </tr>
 </table>
-<br>
-    <center><a data-role="button" data-icon="action" style="width:30%; font-size:12px" onClick="compartir()">Compartir</a></center>
+    <center><a data-role="button" style="width:30%" onClick="compartir()">Compartir</a></center>
     
     </div><!--fin contacto-->
     

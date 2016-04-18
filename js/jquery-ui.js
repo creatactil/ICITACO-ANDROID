@@ -5347,9 +5347,11 @@ $.extend(Datepicker.prototype, {
 			var handler = {
 				prev: function () {
 					$.datepicker._adjustDate(id, -stepMonths, "M");
+					
 				},
 				next: function () {
 					$.datepicker._adjustDate(id, +stepMonths, "M");
+					
 				},
 				hide: function () {
 					$.datepicker._hideDatepicker();
@@ -5371,6 +5373,7 @@ $.extend(Datepicker.prototype, {
 				}
 			};
 			$(this).bind(this.getAttribute("data-event"), handler[this.getAttribute("data-handler")]);
+			
 		});
 	},
 
@@ -5568,6 +5571,8 @@ $.extend(Datepicker.prototype, {
 			showMonthAfterYear = this._get(inst, "showMonthAfterYear"),
 			html = "<div class='ui-datepicker-title'>",
 			monthHtml = "";
+			
+			
 
 		// month selection
 		if (secondary || !changeMonth) {
@@ -5656,6 +5661,7 @@ $.extend(Datepicker.prototype, {
 	/* Notify change of month/year. */
 	_notifyChange: function(inst) {
 		var onChange = this._get(inst, "onChangeMonthYear");
+		
 		if (onChange) {
 			onChange.apply((inst.input ? inst.input[0] : null),
 				[inst.selectedYear, inst.selectedMonth + 1, inst]);
@@ -5688,11 +5694,12 @@ $.extend(Datepicker.prototype, {
 		var numMonths = this._getNumberOfMonths(inst),
 			date = this._daylightSavingAdjust(new Date(curYear,
 			curMonth + (offset < 0 ? offset : numMonths[0] * numMonths[1]), 1));
-
+		
 		if (offset < 0) {
 			date.setDate(this._getDaysInMonth(date.getFullYear(), date.getMonth()));
 		}
 		return this._isInRange(inst, date);
+		
 	},
 
 	/* Is the given date in the accepted range? */
