@@ -31,7 +31,7 @@ function mapa(id) {
 			var web = item.web;
 			var facebook = item.Facebook;
 			
-		$("#nombreentidad").text(nombre);
+	  $("#nombreentidad").text(nombre);
 	  $("#barrioentidad").text(barrio);
 	  $("#municipioentidad").text(municipio);
 	  $("#direccionentidad").text(direccion);

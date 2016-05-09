@@ -17,14 +17,21 @@
  };
  $.datepicker.setDefaults($.datepicker.regional['es']);
 
-var events = [];
+
 
         function listafechas() {
+			
+			//poner esta varible aqui
+			var events = [];
+			
+			$( "#micalendario" ).datepicker("destroy");
 			
 			$('#listadeeventos').empty();
 			$.mobile.changePage("#page9", {transition: "pop"},
             true,
             true);
+			
+			
 			
 			return $.ajax({
                 url: 'http://icitacoapp.creatactil.com/php/fechas.php',
@@ -46,6 +53,8 @@ var events = [];
 
 
 function cargatodo(pr){ 
+	
+		
 	var eventoscargados = pr;	
 	var mievento = eventoscargados.split(";");	
 	var currentDate = new Date();     
@@ -76,6 +85,9 @@ function cargatodo(pr){
     });
 	
 	$("#setDate").click(function () {
+	
+		
+		
 		$("#micalendario").datepicker("setDate", currentDate);
 	});
 
